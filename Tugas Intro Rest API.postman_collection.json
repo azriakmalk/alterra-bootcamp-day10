@@ -1,0 +1,443 @@
+{
+	"info": {
+		"_postman_id": "3e20db54-5eee-402b-a73b-7a841ca8320c",
+		"name": "Tugas Intro Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12801444"
+	},
+	"item": [
+		{
+			"name": "News API",
+			"item": [
+				{
+					"name": "All article about bitcoin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-news-api}}/everything?q=bitcoin&apiKey=42fca38acbdb4cfca5d7fb731a879d14",
+							"host": [
+								"{{url-news-api}}"
+							],
+							"path": [
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "bitcoin"
+								},
+								{
+									"key": "apiKey",
+									"value": "42fca38acbdb4cfca5d7fb731a879d14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top Headlines in the country",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-news-api}}/top-headlines?country=id&apiKey=42fca38acbdb4cfca5d7fb731a879d14",
+							"host": [
+								"{{url-news-api}}"
+							],
+							"path": [
+								"top-headlines"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "id"
+								},
+								{
+									"key": "apiKey",
+									"value": "42fca38acbdb4cfca5d7fb731a879d14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Sources",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-news-api}}/top-headlines/sources?apiKey=42fca38acbdb4cfca5d7fb731a879d14",
+							"host": [
+								"{{url-news-api}}"
+							],
+							"path": [
+								"top-headlines",
+								"sources"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "42fca38acbdb4cfca5d7fb731a879d14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All article mentioning Apple from yesterday",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-news-api}}/everything?q=apple&from=2023-01-11&to=2023-01-11&sortBy=popularity&apiKey=42fca38acbdb4cfca5d7fb731a879d14",
+							"host": [
+								"{{url-news-api}}"
+							],
+							"path": [
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "apple"
+								},
+								{
+									"key": "from",
+									"value": "2023-01-11"
+								},
+								{
+									"key": "to",
+									"value": "2023-01-11"
+								},
+								{
+									"key": "sortBy",
+									"value": "popularity"
+								},
+								{
+									"key": "apiKey",
+									"value": "42fca38acbdb4cfca5d7fb731a879d14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All articles pubblished by TechCrunch and The next web",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-news-api}}/everything?domains=techcrunch.com,thenextweb.com&apiKey=42fca38acbdb4cfca5d7fb731a879d14",
+							"host": [
+								"{{url-news-api}}"
+							],
+							"path": [
+								"everything"
+							],
+							"query": [
+								{
+									"key": "domains",
+									"value": "techcrunch.com,thenextweb.com"
+								},
+								{
+									"key": "apiKey",
+									"value": "42fca38acbdb4cfca5d7fb731a879d14"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Swapi API",
+			"item": [
+				{
+					"name": "Get All people resource",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-swapi}}/people/",
+							"host": [
+								"{{url-swapi}}"
+							],
+							"path": [
+								"people",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get people resource by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-swapi}}/people/:id/",
+							"host": [
+								"{{url-swapi}}"
+							],
+							"path": [
+								"people",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get people resource by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-swapi}}/people/?search=Luke Skywalker",
+							"host": [
+								"{{url-swapi}}"
+							],
+							"path": [
+								"people",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Luke Skywalker"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all the film resources",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-swapi}}/films/",
+							"host": [
+								"{{url-swapi}}"
+							],
+							"path": [
+								"films",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get filmm resource by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-swapi}}/films/:id",
+							"host": [
+								"{{url-swapi}}"
+							],
+							"path": [
+								"films",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rent Book API",
+			"item": [
+				{
+					"name": "Get Token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-rent-book}}/token?client_id=CLIENT01&client_secret=SECRET01",
+							"host": [
+								"{{url-rent-book}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": "CLIENT01"
+								},
+								{
+									"key": "client_secret",
+									"value": "SECRET01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-rent-book}}/client",
+							"host": [
+								"{{url-rent-book}}"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get client by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-rent-book}}/client/:id",
+							"host": [
+								"{{url-rent-book}}"
+							],
+							"path": [
+								"client",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client_id\": 1234,\r\n  \"client_key\": \"CLIENT01\",\r\n  \"client_secret\": \"SECRET01\",\r\n  \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-rent-book}}/client",
+							"host": [
+								"{{url-rent-book}}"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update client",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client_id\": 1234,\r\n  \"client_key\": \"CLIENT01\",\r\n  \"client_secret\": \"SECRET01\",\r\n  \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-rent-book}}/client/:id",
+							"host": [
+								"{{url-rent-book}}"
+							],
+							"path": [
+								"client",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url-rent-book}}/client/:id",
+							"host": [
+								"{{url-rent-book}}"
+							],
+							"path": [
+								"client",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url-rent-book",
+			"value": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0"
+		},
+		{
+			"key": "url-swapi",
+			"value": "https://swapi.dev/api"
+		},
+		{
+			"key": "url-news-api",
+			"value": "https://newsapi.org/v2"
+		}
+	]
+}
